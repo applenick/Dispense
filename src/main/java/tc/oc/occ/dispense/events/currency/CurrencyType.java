@@ -4,9 +4,11 @@ public enum CurrencyType {
   KILL("kill"),
   WOOL_CAPTURE("wool_capture"),
   WOOL_TOUCH("wool_touch"),
+  WOOL_DESTROY("wool_destroy"),
   CORE("core"),
   MONUMENT("monument"),
   FLAG("flag"),
+  SCORE("score"),
   WIN("win"),
   PARTICIPATE("participation");
 

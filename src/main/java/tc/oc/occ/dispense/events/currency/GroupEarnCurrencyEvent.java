@@ -17,4 +17,14 @@ public class GroupEarnCurrencyEvent extends MultiPlayerEvent implements Currency
   public CurrencyType getType() {
     return type;
   }
+
+  @Override
+  public boolean isSoundPlayed() {
+    return false;
+  }
+
+  @Override
+  public int getCustomAmount() {
+    return -1;
+  }
 }
