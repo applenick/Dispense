@@ -10,7 +10,8 @@ public enum CurrencyType {
   FLAG("flag"),
   SCORE("score"),
   WIN("win"),
-  PARTICIPATE("participation");
+  PARTICIPATE("participation"),
+  MAP_VOTE("vote");
 
   String configKey; // Using this in case we ever wanna adjust config easily
 
