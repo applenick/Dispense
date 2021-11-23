@@ -13,7 +13,8 @@ public enum CurrencyType {
   SCORE("score", false),
   WIN("win", true),
   PARTICIPATE("participation", true),
-  MAP_VOTE("vote", false);
+  MAP_VOTE("vote", false),
+  CUSTOM("custom", false);
 
   String configKey; // Using this in case we ever wanna adjust config easily
   boolean multiplier; // Whether currency should be given a static or multiplied amount
