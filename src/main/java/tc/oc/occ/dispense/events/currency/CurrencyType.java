@@ -9,7 +9,7 @@ public enum CurrencyType {
   CORE("core", false),
   MONUMENT("monument", false),
   FLAG_CAPTURE("flag_capture", false),
-  FLAG_PICKUP("flag_pickup", true),
+  FLAG_PICKUP("flag_pickup", false),
   SCORE("score", false),
   WIN("win", true),
   PARTICIPATE("participation", true),
