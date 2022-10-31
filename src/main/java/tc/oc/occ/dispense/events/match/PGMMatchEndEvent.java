@@ -11,17 +11,26 @@ public class PGMMatchEndEvent extends DispenseEvent {
 
   private final List<Player> winners;
   private final Map<Player, Duration> playerTimes;
+  private final String winnerName;
   private final Duration matchLength;
 
   public PGMMatchEndEvent(
-      List<Player> winners, Map<Player, Duration> playerTimes, Duration matchLength) {
+      List<Player> winners,
+      Map<Player, Duration> playerTimes,
+      String winnerName,
+      Duration matchLength) {
     this.winners = winners;
+    this.winnerName = winnerName;
     this.playerTimes = playerTimes;
     this.matchLength = matchLength;
   }
 
   public List<Player> getWinners() {
     return winners;
+  }
+
+  public String getWinnerName() {
+    return winnerName;
   }
 
   public List<Player> getParticipants(boolean includeWinners) {
