@@ -15,6 +15,13 @@
         <project.author>applenick</project.author>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>pgm-repo-snapshots</id>
+            <url>https://repo.pgm.fyi/snapshots</url>
+        </repository>
+    </distributionManagement>
+
     <repositories>
         <repository>
             <id>jitpack.io</id>
@@ -73,6 +80,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
