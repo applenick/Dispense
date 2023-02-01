@@ -19,10 +19,9 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: build
-        run: mvn install
-      - name: artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: Dispense.jar
-          path: target/Dispense-*.jar
+      - name: repo
+        run: mvn deploy -s settings.xml
+        env:
+          REPO_USERNAME: ${{ secrets.REPO_USERNAME }}
+          REPO_PASSWORD: ${{ secrets.REPO_PASSWORD }}
+
