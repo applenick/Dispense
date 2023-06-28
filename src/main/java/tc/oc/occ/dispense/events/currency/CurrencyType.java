@@ -15,6 +15,8 @@ public enum CurrencyType {
   PARTICIPATE("participation", true),
   MAP_VOTE("vote", false),
   SPORTSMANSHIP("sportsmanship", false),
+  SPORTSMANSHIP_LOSER("sportsmanship_loser", false),
+  SPORTSMANSHIP_OBS("sportsmanship_obs", false),
   CUSTOM("custom", false);
 
   String configKey; // Using this in case we ever wanna adjust config easily
