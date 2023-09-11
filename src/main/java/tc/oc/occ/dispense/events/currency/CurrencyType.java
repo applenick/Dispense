@@ -1,30 +1,33 @@
 package tc.oc.occ.dispense.events.currency;
 
 public enum CurrencyType {
-  KILL("kill", false),
-  KILL_WOOL_HOLDER("kill_wool_holder", false),
-  WOOL_CAPTURE("wool_capture", false),
-  WOOL_TOUCH("wool_touch", false),
-  WOOL_DESTROY("wool_destroy", false),
-  CORE("core", false),
-  MONUMENT("monument", false),
-  FLAG_CAPTURE("flag_capture", false),
-  FLAG_PICKUP("flag_pickup", false),
-  SCORE("score", false),
-  WIN("win", true),
-  PARTICIPATE("participation", true),
-  MAP_VOTE("vote", false),
-  SPORTSMANSHIP("sportsmanship", false),
-  SPORTSMANSHIP_LOSER("sportsmanship_loser", false),
-  SPORTSMANSHIP_OBS("sportsmanship_obs", false),
-  CUSTOM("custom", false);
+  KILL("kill", false, false),
+  KILL_WOOL_HOLDER("kill_wool_holder", false, false),
+  WOOL_CAPTURE("wool_capture", false, false),
+  WOOL_TOUCH("wool_touch", false, false),
+  WOOL_DESTROY("wool_destroy", false, false),
+  CORE("core", false, false),
+  MONUMENT("monument", false, false),
+  FLAG_CAPTURE("flag_capture", false, false),
+  FLAG_PICKUP("flag_pickup", false, false),
+  SCORE("score", false, false),
+  WIN("win", true, false),
+  PARTICIPATE("participation", true, false),
+  MAP_VOTE("vote", false, false),
+  SPORTSMANSHIP("sportsmanship", false, false),
+  SPORTSMANSHIP_LOSER("sportsmanship_loser", false, false),
+  SPORTSMANSHIP_OBS("sportsmanship_obs", false, false),
+  MISSION_COMPLETION("mission", false, true),
+  CUSTOM("custom", false, false);
 
   String configKey; // Using this in case we ever wanna adjust config easily
   boolean multiplier; // Whether currency should be given a static or multiplied amount
+  boolean skip; // Whether the currency has already been granted
 
-  CurrencyType(String configKey, boolean multiplier) {
+  CurrencyType(String configKey, boolean multiplier, boolean skip) {
     this.configKey = configKey;
     this.multiplier = multiplier;
+    this.skip = skip;
   }
 
   public String getKey() {
@@ -33,5 +36,9 @@ public enum CurrencyType {
 
   public boolean isMultiplier() {
     return multiplier;
+  }
+
+  public boolean isSkip() {
+    return skip;
   }
 }
