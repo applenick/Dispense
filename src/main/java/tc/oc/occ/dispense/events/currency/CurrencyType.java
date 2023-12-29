@@ -3,6 +3,7 @@ package tc.oc.occ.dispense.events.currency;
 public enum CurrencyType {
   KILL("kill", false, false),
   KILL_WOOL_HOLDER("kill_wool_holder", false, false),
+  KILL_ASSIST("kill_assist", false, false),
   WOOL_CAPTURE("wool_capture", false, false),
   WOOL_TOUCH("wool_touch", false, false),
   WOOL_DESTROY("wool_destroy", false, false),

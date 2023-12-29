@@ -8,15 +8,22 @@ public class PGMPlayerDeathEvent extends DispenseEvent {
 
   private final Player dead;
   private final @Nullable Player killer;
+  private final @Nullable Player assister;
 
   private final boolean self;
   private final boolean teamKill;
   private final boolean suicide;
 
   public PGMPlayerDeathEvent(
-      Player dead, @Nullable Player killer, boolean self, boolean teamKill, boolean suicide) {
+      Player dead,
+      @Nullable Player killer,
+      @Nullable Player assister,
+      boolean self,
+      boolean teamKill,
+      boolean suicide) {
     this.dead = dead;
     this.killer = killer;
+    this.assister = assister;
     this.self = self;
     this.teamKill = teamKill;
     this.suicide = suicide;
@@ -29,6 +36,11 @@ public class PGMPlayerDeathEvent extends DispenseEvent {
   @Nullable
   public Player getKiller() {
     return killer;
+  }
+
+  @Nullable
+  public Player getAssister() {
+    return assister;
   }
 
   public boolean isSelfKill() {
