@@ -28,11 +28,26 @@
     </repositories>
 
     <dependencies>
-        <!-- SportBukkit 1.8 -->
         <dependency>
-            <groupId>app.ashcon</groupId>
-            <artifactId>sportpaper</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <groupId>dev.pgm.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.8_1.21.10-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Minecraft dependency, always present -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>17.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Annotations -->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>26.0.2-1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
