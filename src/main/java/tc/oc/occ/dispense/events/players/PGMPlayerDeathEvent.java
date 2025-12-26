@@ -1,7 +1,7 @@
 package tc.oc.occ.dispense.events.players;
 
-import javax.annotation.Nullable;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.Nullable;
 import tc.oc.occ.dispense.events.DispenseEvent;
 
 public class PGMPlayerDeathEvent extends DispenseEvent {
