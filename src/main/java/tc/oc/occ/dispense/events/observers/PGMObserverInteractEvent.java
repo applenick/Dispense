@@ -1,8 +1,8 @@
 package tc.oc.occ.dispense.events.observers;
 
-import javax.annotation.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.Nullable;
 import tc.oc.occ.dispense.events.SinglePlayerEvent;
 
 public class PGMObserverInteractEvent extends SinglePlayerEvent {
